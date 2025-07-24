@@ -4,7 +4,7 @@ export const routes: Routes = [
 
     {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./home/home-routes').then(m => m.HOME_ROUTES),
     },
     {
         path: '**',
