@@ -38,9 +38,10 @@ export class LoginComponent {
     const { email, password } = this.loginForm.value;
 
     this.authService.login(email, password).subscribe({
-      next: response => console.log(response),
-      error: err => {
-        console.error(err);
+      next: () => {
+        this.loginForm.reset();
+      },
+      error: () => {
         this.errorMessage = 'Correo o contraseña incorrectos';
       }
     });
