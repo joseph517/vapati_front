@@ -1,0 +1,201 @@
+@use '/home/joseph/desktop/project/angular/vapati_front/src/styles.sass' as *
+
+$color-primary: #3b82f6
+$color-cta: #f97316
+$color-muted: #6b7280
+$color-border: #e5e7eb
+$color-text: #1f2937
+$color-bg: #ffffff
+$color-hover: #ea580c
+$color-gray-hover: #f9fafb
+$radius: 0.5rem
+
+.login-wrapper
+  max-width: 28rem
+  margin: 2rem auto
+  padding: 1rem
+  color: $color-text
+
+.login-card
+  background: $color-bg
+  border: 1px solid $color-border
+  border-radius: 1rem
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06)
+  padding: 2rem
+
+.login-header
+  text-align: center
+  margin-bottom: 1.5rem
+
+  h2
+    font-size: 1.5rem
+    font-weight: bold
+    color: $primary
+    margin-bottom: 10px
+
+  p
+    color: $color-muted
+
+.login-form
+  display: flex
+  flex-direction: column
+  gap: 1.25rem
+
+  .form-group
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+    
+    .error-message
+      color: #9CA3AF
+      font-size: 12px
+
+    label
+      font-weight: 500
+      font-size: 0.875rem
+      color: $secondary
+
+    input
+      padding: 0.75rem
+      border: 1px solid $color-border
+      border-radius: $radius
+      font-size: 0.875rem
+      transition: border-color 0.2s ease
+
+      &:focus
+        border-color: $color-primary
+        outline: none
+
+  .password-wrapper
+    position: relative
+
+    input
+      width: 100%
+
+    .toggle-password
+      position: absolute
+      right: 0.75rem
+      top: 50%
+      transform: translateY(-50%)
+      background: none
+      border: none
+      cursor: pointer
+
+      .icon
+        width: 1.25rem
+        height: 1.25rem
+        color: #9ca3af
+
+        &:hover
+          color: #4b5563
+
+  .form-options
+    display: flex
+    justify-content: space-between
+    font-size: 0.875rem
+
+    label
+      display: flex
+      align-items: center
+      gap: 0.5rem
+      color: $color-muted
+
+    a
+      color: $primary
+      font-weight: 500
+
+      &:hover
+        color: $color-cta
+
+  .btn-login
+    width: 100%
+    padding: 0.75rem
+    background-color: $primary
+    color: white
+    font-weight: 600
+    border: none
+    border-radius: $radius
+    transition: background-color 0.2s ease
+
+    &:hover
+      scale: 1.05
+
+.divider
+  position: relative
+  margin: 2rem 0
+  text-align: center
+
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    height: 1px
+    width: 100%
+    background-color: $color-border
+    z-index: 0
+
+  span
+    position: relative
+    background: white
+    padding: 0 1rem
+    font-size: 0.875rem
+    color: #9ca3af
+    z-index: 1
+
+.social-login
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 0.75rem
+
+  .btn-social
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+    padding: 0.75rem
+    border: 1px solid $color-border
+    border-radius: $radius
+    font-size: 0.875rem
+    background: white
+    transition: background-color 0.2s ease
+
+    &:hover
+      scale: 1.05
+
+    svg
+      width: 1.25rem
+      height: 1.25rem
+
+    &.google
+      color: $color-text
+
+    &.facebook
+      color: #1877f2
+
+.register
+  margin-top: 1.5rem
+  text-align: center
+
+  p
+    font-size: 0.875rem
+    color: $color-muted
+
+    a
+      color: $color-primary
+      font-weight: 500
+
+      &:hover
+        color: $color-cta
+
+.login-footer
+  margin-top: 2rem
+  text-align: center
+  font-size: 0.75rem
+  color: #9ca3af
+
+  .security-info
+    margin-top: 0.5rem
+    display: flex
+    justify-content: center
+    gap: 1rem

@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="left">
-        <div class="logo">
+        <div routerLink="/" class="logo">
             <img src="Union.svg" alt="logo" />
             <div class="text">
                 <span class="vapati">Vapati</span>
@@ -9,7 +9,7 @@
         </div>
         <div class="menu">
             <ol>
-                <li><a href="#">Explorar</a></li>
+                <li><a >Explorar</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">contact</a></li>
             </ol>
@@ -20,8 +20,8 @@
             <lucide-icon name="search"></lucide-icon>
             <input type="text" placeholder="Buscar proyectos" />
         </div>
-        <div class="login">
-            <button class="btn-primary">Iniciar sesion</button>
+        <div class="login" *ngIf="!isLoginRoute">
+            <button routerLink="/login" class="btn-primary">Iniciar sesion</button>
         </div>
         <div class="register">
             <button class="btn-primary-outline">Registrarse</button>
