@@ -1,0 +1,147 @@
+footer
+  background-color: #111827
+  color: white
+  padding: 2rem 0
+  
+  @media (min-width: 768px)
+    padding: 3rem 0
+
+  .container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 1rem
+
+  .footer-grid
+    display: grid
+    grid-template-columns: 1fr
+    gap: 1.5rem
+    
+    @media (min-width: 640px)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 2rem
+    
+    @media (min-width: 1024px)
+      grid-template-columns: repeat(4, 1fr)
+
+  .brand-section
+    @media (min-width: 640px)
+      grid-column: span 2
+    
+    @media (min-width: 1024px)
+      grid-column: span 1
+
+  .brand-header
+    display: flex
+    align-items: center
+    gap: 0.75rem
+    margin-bottom: 1rem
+    
+    @media (min-width: 768px)
+      gap: 1rem
+
+  .brand-logo
+    width: 2rem
+    height: 2rem
+    background: linear-gradient(to bottom, #9CCC65, #2E7D32)
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+    
+    @media (min-width: 768px)
+      width: 2.5rem
+      height: 2.5rem
+
+    img
+      width: 50px
+      
+      @media (min-width: 768px)
+        font-size: 0.875rem
+
+  .brand-info
+    display: flex
+    flex-direction: column
+
+    .brand-name
+      font-size: 1.125rem
+      font-weight: bold
+      
+      @media (min-width: 768px)
+        font-size: 1.25rem
+
+    .badges
+      display: flex
+      gap: 0.25rem
+
+      .badge
+        display: inline-flex
+        align-items: center
+        border-radius: 9999px
+        border: 1px solid transparent
+        font-weight: 600
+        transition: all 0.2s ease
+        font-size: 0.75rem
+        padding: 0 0.25rem
+        
+        @media (min-width: 768px)
+          padding: 0 0.5rem
+
+        &:focus
+          outline: none
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2)
+
+        &.crowdfunding
+          background-color: #2E7D32
+          color: white
+          
+          &:hover
+            background-color: rgba(46, 125, 50, 0.8)
+
+        &.app
+          background-color: #9CCC65
+          color: white
+          
+          &:hover
+            background-color: rgba(156, 204, 101, 0.8)
+
+  .brand-description
+    color: #9CA3AF
+    font-size: 0.875rem
+    
+    @media (min-width: 768px)
+      font-size: 1rem
+
+  .footer-column
+    h3
+      font-weight: 600
+      margin-bottom: 1rem
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li
+        margin-bottom: 0.5rem
+
+        a
+          color: #9CA3AF
+          text-decoration: none
+          transition: color 0.2s ease
+          
+          &:hover
+            color: white
+
+  .footer-bottom
+    border-top: 1px solid #374151
+    margin-top: 1.5rem
+    padding-top: 1.5rem
+    text-align: center
+    color: #9CA3AF
+    font-size: 0.875rem
+    
+    @media (min-width: 768px)
+      margin-top: 2rem
+      padding-top: 2rem
+      font-size: 1rem

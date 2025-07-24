@@ -1,0 +1,116 @@
+@use '/home/joseph/desktop/project/angular/vapati_front/src/styles.sass' as *
+.navbar
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin: 10px 0
+    font-size: 18px
+    line-height: 28px
+
+    .left
+        display: flex
+        align-items: center
+        .logo
+            display: flex
+            align-items: center
+            img
+                width: 50px
+            .text
+                margin-left: 10px
+                display: flex
+                flex-direction: column
+                .vapati
+                    color: $primary
+                    font-weight: 700
+                    font-size: 16px
+                    line-height: 24px
+
+                .crowdfunding
+                    font-size: 12px
+                    line-height: 16px
+                    padding: 2px 8px
+                    font-weight: 600
+                    color: $tertiary
+                    background-color: $primary
+                    border-radius: 999px
+
+        .menu
+            display: none
+
+    .right
+        display: flex
+        align-items: center
+        .search
+            display: none
+            margin-right: 8px
+            align-items: center
+            position: relative
+            input
+                width: 300px
+                padding: 12px 16px 12px 40px
+                border: 1px solid #e5e7eb
+                border-radius: 8px
+                background-color: #f9fafb
+                font-size: 14px
+                color: #374151
+                outline: none
+                transition: all 0.2s ease
+            lucide-icon
+                margin-top: 10px
+                position: absolute
+                left: 12px
+                z-index: 2
+                color: #6b7280
+                pointer-events: none
+                ::ng-deep svg
+                    width: 16px !important
+                    height: 16px !important
+                    stroke-width: 1.5
+        .login
+            display: flex
+            align-items: center
+            cursor: pointer
+            margin-right: 8px
+
+        .register
+            display: none
+            cursor: pointer
+
+@media screen and (min-width: 768px)
+    .navbar
+        .left
+            .logo
+                .text
+                    .vapati
+                        font-size: 20px
+                        line-height: 28px
+                    .crowdfunding
+                        font-size: 12px
+                        line-height: 16px
+        .right
+            .register
+                display: flex
+
+@media screen and (min-width: 1024px)
+    .navbar
+        .left
+            .menu
+                display: block
+                margin-left: 30px
+                ol
+                    display: flex
+                    list-style: none
+                    li
+                        margin-right: 10px
+                        cursor: pointer
+                        a
+                            text-decoration: none
+                            color: $grey
+                            font-weight: 400
+                            font-size: 16px
+
+                            &:hover
+                                color: $primary
+        .right
+            .search
+                display: block
