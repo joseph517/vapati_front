@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { enviroments } from '../../../enviroments/enviroments';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { UserResponse } from '../interfaces/user-response';
+import { UserResponse } from '../interfaces/user-response.interface';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
