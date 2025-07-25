@@ -21,10 +21,10 @@
             <input type="text" placeholder="Buscar proyectos" />
         </div>
         <div class="login" *ngIf="!isLoginRoute">
-            <button routerLink="/login" class="btn-primary">Iniciar sesion</button>
+            <button routerLink="/auth/login" class="btn-primary">Iniciar sesion</button>
         </div>
         <div class="register">
-            <button class="btn-primary-outline">Registrarse</button>
+            <button routerLink="/auth/register" class="btn-primary-outline">Registrarse</button>
         </div>
     </div>
 </div>
